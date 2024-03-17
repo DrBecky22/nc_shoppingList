@@ -23,10 +23,28 @@
     </ul>
     <script>
         // add your JavaScript code here
+        list = [];
+
         function getItem() {
             event.preventDefault();
             const item = document.getElementByID("item").value;
             console.log(item);
+            if (item !== list.includes()) {
+                list.push(item);
+                list.sort();
+            }
+
+            // list.sort   -- figure out how and where to sort the list alphabetically --
+            document.getElementByID("myForm").reset();
+            console.log(list);
+        }
+
+        const shoppingList = document.getElementById("shoppingList");
+
+        function makeList() {
+            for (item of list) {
+
+            }
         }
     </script>
 </body>
